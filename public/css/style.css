@@ -1,0 +1,19 @@
+/* Google Fonts Import Link */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+/* GENERAL */
+/* CSS when button is clicked */
+
+html,body{
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Poppins", serif !important;
+}
+
+body::-webkit-scrollbar{ /* this hides the scrollbar but keeps the function */
+    display: none; /* for chrome */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
