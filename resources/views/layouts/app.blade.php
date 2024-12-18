@@ -21,36 +21,34 @@
 </head>
 <body id="home">
 
+    @yield('contents')
 
+    {{-- Font-awesome JS CDN --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
 
+    {{-- jquery JS CDN --}}
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 
-        @yield('contents')
+    {{-- Bootstrap JS CDN --}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
-        {{-- Font-awesome JS CDN --}}
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
+    {{-- Sweet Alert JS CDN --}}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.js"></script>
 
-        {{-- jquery JS CDN --}}
-        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    {{-- AOS JS --}}
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-        {{-- Bootstrap JS CDN --}}
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="{{ asset('js/validations.js') }}"></script>
 
-        {{-- Sweet Alert JS CDN --}}
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.js"></script>
+    <script>
+        AOS.init({
+    duration: 1100,
+    easing: 'ease-in-out',
+    offset: 300,
+    once: true,
+        });
+    </script>
 
-        {{-- AOS JS --}}
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-        <script src="{{ asset('js/validations.js') }}"></script>
-
-        <script>
-            AOS.init({
-        duration: 1100,
-        easing: 'ease-in-out',
-        offset: 300,
-        once: true,
-            });
-        </script>
-    </div>
+</div>
 
 </body>
