@@ -46,13 +46,13 @@ class FileController extends Controller
         $request->validate([
             'last_name' => 'required|max:255|regex:/^[a-zA-Z\s]+$/',
             'first_name' => 'required|max:255|regex:/^[a-zA-Z\s]+$/',
-            'middle_name' => 'nullable|string|max:255',
+            'middle_name' => 'nullable|string|max:255||regex:/^[a-zA-Z\s]+$/',
             'without_middle_name' => 'boolean',
             'extension_name' => 'nullable|string|max:255',
             'date_of_birth' => 'required|date',
             'civil_status' => 'required|string',
             'address' => 'required|string',
-            'contact_details' => 'required|string|max:255',
+            'contact_details' => 'required|digits:11',
         ]);
 
         $file->update($request->all());
